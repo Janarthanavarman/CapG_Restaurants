@@ -1,0 +1,6 @@
+@CapG_HostAddress = http://localhost:5014
+
+GET {{CapG_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
