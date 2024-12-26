@@ -2,6 +2,7 @@ using CapG.IRepositories;
 using CapG.AppDbContext;
 using Microsoft.EntityFrameworkCore;
 using CapG.Models;
+using System.Linq.Expressions;
 namespace CapG.Repositories;
 public class GenericRepository<T> : IGenericRepository<T> where T : class
 {
@@ -51,5 +52,15 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
             _dbSet.Remove(entity);
             await _context.SaveChangesAsync();
         }
+    }
+    public async Task<IEnumerable<T>> GetItemsByDelegatsFilterAsync(FilterCondition<T> filter)
+    {
+        IQueryable<T> query = _dbSet;
+        return query.AsEnumerable().Where(item => filter(item));
+    }
+    public async Task<IEnumerable<T>> GetItemsByExpFilterAsync(Expression<Func<T, bool>> filter)
+    {
+        IQueryable<T> query = _dbSet;
+        return await query.Where(filter).ToListAsync();
     }
 }

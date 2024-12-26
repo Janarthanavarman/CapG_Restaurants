@@ -29,17 +29,17 @@ public class DishDbContext : DbContext
         if (!dishs.Any())
         {
             dishs.AddRange(
-                new Dishs { DishID = 1, DishCode = "DISH001", DishName = "Medu Vada", DishCategoryID = 1, SpicyLevelID = 3, IsAvail = true, Rating = 5, Price = 15.00 },
-                new Dishs { DishID = 2, DishCode = "DISH002", DishName = "Sundal", DishCategoryID = 1, SpicyLevelID = 2, IsAvail = true, Rating = 5, Price = 20.00 },
-                new Dishs { DishID = 3, DishCode = "DISH003", DishName = "Paniyaram", DishCategoryID = 1, SpicyLevelID = 3, IsAvail = false, Rating = 5, Price = 30.00 },
+                new Dishs { DishID = 1, DishCode = "DISH001", DishName = "Medu Vada", DishCategoryID = 1, SpicyLevelID = 3, IsAvail = true, Rating = 4.3, Price = 15.00 },
+                new Dishs { DishID = 2, DishCode = "DISH002", DishName = "Sundal", DishCategoryID = 1, SpicyLevelID = 2, IsAvail = true, Rating = 3.8, Price = 20.00 },
+                new Dishs { DishID = 3, DishCode = "DISH003", DishName = "Paniyaram", DishCategoryID = 1, SpicyLevelID = 3, IsAvail = false, Rating = 2.9, Price = 30.00 },
 
-                new Dishs { DishID = 4, DishCode = "DISH004", DishName = "Chettinad Chicken Curry", DishCategoryID = 2, SpicyLevelID = 3, IsAvail = true, Rating = 5, Price = 180.00 },
-                new Dishs { DishID = 5, DishCode = "DISH005", DishName = "Kootu", DishCategoryID = 2, SpicyLevelID = 1, IsAvail = true, Rating = 5, Price = 15.00 },
-                new Dishs { DishID = 6, DishCode = "DISH006", DishName = "Thambrani Rice (Tambram Rice)", DishCategoryID = 2, SpicyLevelID = 2, IsAvail = false, Rating = 5, Price = 35.00 },
+                new Dishs { DishID = 4, DishCode = "DISH004", DishName = "Chettinad Chicken Curry", DishCategoryID = 2, SpicyLevelID = 3, IsAvail = true, Rating = 4.5, Price = 180.00 },
+                new Dishs { DishID = 5, DishCode = "DISH005", DishName = "Kootu", DishCategoryID = 2, SpicyLevelID = 1, IsAvail = true, Rating = 1.3, Price = 15.00 },
+                new Dishs { DishID = 6, DishCode = "DISH006", DishName = "Thambrani Rice (Tambram Rice)", DishCategoryID = 2, SpicyLevelID = 2, IsAvail = false, Rating = 4.0, Price = 35.00 },
 
                 new Dishs { DishID = 7, DishCode = "DISH007", DishName = "Payasam", DishCategoryID = 3, SpicyLevelID = 3, IsAvail = true, Rating = 5, Price = 15.00 },
-                new Dishs { DishID = 8, DishCode = "DISH008", DishName = "Kesari", DishCategoryID = 3, SpicyLevelID = 3, IsAvail = true, Rating = 5, Price = 15.00 },
-                new Dishs { DishID = 9, DishCode = "DISH009", DishName = "Halwa", DishCategoryID = 3, SpicyLevelID = 3, IsAvail = false, Rating = 5, Price = 25.00 }
+                new Dishs { DishID = 8, DishCode = "DISH008", DishName = "Kesari", DishCategoryID = 3, SpicyLevelID = 3, IsAvail = true, Rating = 3.5, Price = 15.00 },
+                new Dishs { DishID = 9, DishCode = "DISH009", DishName = "Halwa", DishCategoryID = 3, SpicyLevelID = 3, IsAvail = false, Rating = 4.1, Price = 25.00 }
             );
             SaveChanges();
         }

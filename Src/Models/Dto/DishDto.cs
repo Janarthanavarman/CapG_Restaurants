@@ -13,7 +13,7 @@ public class DishDto
     public string SpicyLevelName{get; set;}
     [JsonPropertyName("available")]
     public bool IsAvail{get; set;}
-    public int Rating{get; set;}
+    public double Rating{get; set;}
     public double Price{get; set;}
 }
 
